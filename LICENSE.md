@@ -1,4 +1,5 @@
 # License
+As the work is already derived, the files are under two different licenses:
 
 ## ./inc
 ./inc directory is under GNU General Public License as it is provided by [mkgmap](https://www.mkgmap.org.uk/).
