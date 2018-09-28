@@ -1,0 +1,168 @@
+﻿# Levels:
+# 0: under 120 m, zoom 24, city
+# 1: under 300 m, zoom 23, hiking
+# 2: under 2 km, zoom 20, cycling
+# 3: under 8 km, zoom 18, car
+# 4: under 30 km, zoom 16, overview
+
+# Places
+place=city | population >= 300000 [0x0100 level 4]
+place=town | population >= 3000 [0x0600 level 3]
+place=suburb [0x0c00 level 2]
+place=village | population >= 200 [0x0b00 level 2]
+place=hamlet | (population < 200 & population >= 100) [0x0b02 level 2]
+place=isolated_dwelling | population < 100 [0x0b03 level 1]
+
+# Accomodation (with service)
+tourism=hotel [0x2b01 level 2]
+tourism=hostel | tourism=motel [0x2b02 level 2]
+tourism=motel [0x2b01 level 2]
+tourism=alpine_hut [0x2b02 level 2]
+tourism=guest_house [0x2b02 level 2]
+# (without service)
+tourism=camp_site | tourism=caravan_site [0x2b03 level 3]
+tourism=wilderness_hut [0x2b05 level 2]
+amenity=shelter & shelter_type=basic_hut [0x2b05 level 2]
+amenity=shelter & (shelter_type=lean_to | shelter_type=weather_shelter) [0x2b06 level 2]
+amenity=shelter [0x2b07 level 1]
+
+# Place to rest
+tourism=picnic_site [0x4a00 level 0]
+amenity=bench [0x6605 level 0]
+
+# Things to see
+historic=museum | tourism=museum [0x2c02 level 1]
+historic=archaeological_site [0x2c02 level 1]
+historic=memorial [0x2c10 level 0]
+historic=monument [0x2c10 level 0]
+historic=ruins | (historic=castle & ruins=yes) [0x2c0e level 1]
+historic=castle [0x2c0d level 2]
+tourism=attraction [0x2c04 level 1]
+tourism=artwork [0x2c04 level 0]
+tourism=museum [0x2c02 level 0]
+tourism=theme_park [0x2c01 level 1]
+tourism=viewpoint [0x2c04 level 1]
+tourism=zoo [0x2c07 level 2]
+amenity=place_of_worship [0x2c0b level 0]
+man_made=tower & (tower:type=observation | tourism=viewpoint) [0x6701 level 2]
+
+# Hiking info
+information=guidepost & (bicycle=yes | ski=yes) [0x4c01 level 2]
+information=guidepost [0x4c01 level 1]
+tourism=information [0x4c00 level 0]
+
+# Emergency
+amenity=doctors [0x3002 level 1]
+amenity=hospital [0x3002 level 3]
+amenity=emergency_phone [0x5100 level 2]
+amenity=fire_station [0x3008 level 1]
+amenity=pharmacy [0x2e05 level 1]
+amenity=police [0x3001 level 1]
+amenity=telephone [0x5100 level 0]
+
+# Other important hiking amenities
+amenity=drinking_water | amenity=water_point [0x5000 level 2]
+natural=spring & drinking_water=no [0x6514 level 0]
+natural=spring [0x6511 level 2]
+amenity=water_well & access!=no & drinkable!=no & drinking_water!=no [0x5000 level 2]
+amenity=toilets [0x4e00 level 1]
+amenity=shower [0x4f00 level 1]
+
+# Man made
+man_made=tower [0x6411 level 2]
+man_made=lighthouse [0x1602 level 2]
+
+# Food
+amenity=fast_food [0x2a07 level 0]
+amenity=food_court [0x2a07 level 0]
+amenity=restaurant [0x2a00 level 0]
+
+# Drinking
+amenity=cafe [0x2a0e level 0]
+amenity=pub [0x2d01 level 0]
+amenity=biergarten [0x2d02 level 0]
+
+# Various amenities
+amenity=atm { name '${name}' | '${operator}' } [0x2f06 level 0]
+amenity=bank { name '${name}' | '${operator}' } [0x2f06 level 0]
+amenity=casino [0x2d04 level 0]
+amenity=cinema [0x2d03 level 0]
+amenity=college [0x2c05 level 0]
+amenity=concert_hall [0x2c09 level 0]
+amenity=conference_centre | amenity=convention_center [0x2c09 level 0]
+amenity=community_centre [0x2c09 level 0]
+amenity=courthouse [0x3004 level 0]
+amenity=grave_yard [0x6403 level 1]
+amenity=library [0x2c03 level 0]
+amenity=parking [0x2f0b level 0]
+amenity=post_office [0x2f05 level 0]
+amenity=public_building [0x3000 level 0]
+amenity=recycling [0x2f15 level 0]
+amenity=school [0x2c05 level 0]
+amenity=theatre [0x2d01 level 0]
+amenity=townhall [0x3003 level 1]
+amenity=university [0x2c05 level 0]
+amenity=zoo [0x2c07 level 1]
+
+# Sports & leisure
+sport=9pin [0x2d07 level 0]
+sport=10pin [0x2d07 level 0]
+sport=multi [0x2d0a level 0]
+sport=skating [0x2d08 level 0]
+sport=skiing [0x2d06 level 0]
+sport=swimming [0x2d09 level 0]
+leisure=golf_course [0x2d05 level 0]
+leisure=ice_rink [0x2d08 level 0]
+leisure=marina [0x4300 level 0]
+leisure=park [0x2c06 level 0]
+leisure=pitch [0x2c08 level 0]
+leisure=sports_center | leisure=sports_centre [0x2d0a level 0]
+leisure=stadium [0x2c08 level 1]
+leisure=track [0x2c08 level 0]
+leisure=water_park [0x2d08 level 0]
+
+# Transport
+aeroway=aerodrome & importance=international [0x2f04 level 4]	# Mezinárodní letiště
+aeroway=aerodrome [0x2f04 level 2]
+aeroway=terminal [0x2f04 level 1]
+public_transport=station | amenity=bus_station | railway=station | public_transport=stop_position | highway=bus_stop | railway=halt | railway=tram_stop | railway=subway_entrance [0x2f08 level 0]
+
+# Přírodní
+natural=beach [0x6604 level 2]
+natural=cliff [0x6607 level 0]
+natural=peak [0x6616 level 2]
+natural=volcano [0x2c0c level 2]
+place=island [0x650c level 2]
+natural=rock | natural=stone [0x6614 level 2]
+
+# Shops
+shop=outdoor | shop=sports [0x2e0a level 0]
+shop=supermarket | amenity=supermarket [0x2e02 level 0]
+shop=mall [0x2e04 level 0]
+shop=bakers [0x2e02 level 0]
+shop=bakery [0x2e02 level 0]
+shop=bicycle [0x2e0a level 0]
+shop=butcher [0x2e00 level 0]
+shop=chemist [0x2e05 level 0]
+shop=clothes [0x2e07 level 0]
+shop=computer [0x2e0b level 0]
+shop=convenience [0x2e02 level 0]
+shop=department_store [0x2e01 level 0]
+shop=doityourself [0x2e09 level 0]
+shop=fashion [0x2e07 level 0]
+shop=garden_centre [0x2e08 level 0]
+shop=garden_center [0x2e08 level 0]
+shop=general [0x2e03 level 0]
+shop=hardware [0x2e09 level 0]
+shop=organic [0x2e0a level 0]
+shop=* [0x2e0c level 0]
+
+# For cars
+highway=services [0x210f level 0]
+amenity=fuel & shop=convenience [0x2e06 level 0]
+amenity=fuel { name '${operator}: ${name}' | '${name}' | '${operator}' } [0x2f01 level 0]
+shop=car_repair [0x2f03 level 0]
+
+# Final - for compatibility with previous mkgmap. To be changed later.
+<finalize>
+ include './inc/compat_points';

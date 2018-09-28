@@ -1,0 +1,86 @@
+# Levels:
+# 0: <= 120 m, zoom 24, city
+# 1: <= 300 m, zoom 23, hiking
+# 2: <= 1.2 km, zoom 20, cycling
+# 3: <= 8 km, zoom 18, car
+# 4: <= 30 km, zoom 16, overview
+
+# Hiking trails with "continue" to draw the tracks too
+mkgmap:red=yes | osmc:symbol ~ 'red.*' [0x10100 level 2 continue]
+mkgmap:blue=yes | osmc:symbol ~ 'blue.*' [0x10101 level 2 continue]
+mkgmap:green=yes | osmc:symbol ~ 'green.*' [0x10102 level 2 continue]
+mkgmap:yellow=yes | osmc:symbol ~ 'yellow.*' [0x10103 level 2 continue]
+mkgmap:black=yes | osmc:symbol ~ 'red.*' [0x10104 level 2 continue]
+
+# Borders
+boundary=administrative & admin_level=2 [0x1e level 4]
+boundary=national_park | boundary=protected_area [0x1c level 3]
+
+# Railway, we need to continue with tram.
+railway=light_rail [0x14 level 4]
+railway=rail & usage=main [0x14 level 4]
+railway=rail & usage=branch [0x14 level 3]
+railway=rail [0x14 level 2]
+railway=tram [0x10e00 level 2 continue]
+
+# Routable roads first
+# Used roads: 0x01 - 0x06, 0x08 - 0x13
+highway=motorway [0x01 road_class 4 road_speed 7 level 4]
+highway=trunk [0x02 road_class 4 road_speed 6 level 4]
+highway=primary | highway=primary_link [0x03 road_class 3 road_speed 5 level 4]
+highway=secondary | highway=secondary_link [0x04 road_class 2 road_speed 4 level 3]
+highway=tertiary | highway=tertiary_link [0x05 road_class 1 road_speed 3 level 3]
+highway=residential | highway=living_street [0x06 road_class 0 road_speed 2 level 2]
+highway=motorway_link [0x09 road_class 1 road_speed 6 level 2]
+highway=trunk_link [0x08 road_class 1 road_speed 5 level 2]
+highway=pedestrian & area!=yes [0x06 road_class 0 level 2]
+# Tracks
+highway=service | (highway=track & tracktype=grade1) | highway=unclassified [0x0a road_class 0 level 2]
+highway=track & tracktype=grade2 [0x0b road_class 0 level 2]
+highway=track & tracktype=grade3 [0x0c road_class 0 level 2]
+highway=track & tracktype=grade4 [0x0d road_class 0 level 2]
+highway=track & tracktype=grade5 [0x0e road_class 0 level 2]
+highway=track | highway=byway | highway=minor [0x0f road_class 0 level 2]
+# No cars
+highway=cycleway & foot=no [0x30 road_class 0 level 2]
+highway=cycleway [0x11 road_class 0 level 2]
+highway=footway [0x10 road_class 0 level 1]
+highway=path | highway=bridleway [0x12 road_class 0 level 1]
+highway=steps [0x13 road_class 0 level 1]
+
+# Mop up any unrecognised highway types
+highway=* & highway!=abandoned & highway!=disused & area!=yes [0x07 road_class 0 level 1]
+
+# Lifts of different kinds
+aerialway=cable_car | aerialway=gondola | aerialway~'.*_lift' [0x2f level 2]
+aerialway=* [0x38 level 1]
+
+natural=coastline [0x2c level 4]
+power=line [0x29 level 1]
+
+# Rivers
+waterway=canal [0x1f level 2]
+waterway=drain [0x1f level 1]
+waterway=river [0x1f level 3]
+waterway=stream [0x18 level 2]
+
+# Transportation
+route=ferry [0x1a road_class 0 level 2]
+aeroway=runway [0x27 level 2]
+
+# Contour lines
+contour=elevation & contour_ext=elevation_major
+	{ name '${ele|conv:m=>ft}'; }
+	[0x22 level 4]
+contour=elevation & contour_ext=elevation_medium
+	{ name '${ele|conv:m=>ft}'; }
+	[0x21 level 2]
+contour=elevation & contour_ext=elevation_minor
+        { name '${ele|conv:m=>ft}'; }
+        [0x20 level 1]
+
+
+# Final - for compatibility with previous mkgmap.
+<finalize>
+ include './inc/compat_lines';
+ include './inc/access';

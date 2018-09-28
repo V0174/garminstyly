@@ -1,0 +1,70 @@
+﻿# Levels:
+# 0: under 120 m, zoom 24, city
+# 1: under 300 m, zoom 23, hiking
+# 2: under 2 km, zoom 20, cycling
+# 3: under 8 km, zoom 18, car
+# 4: under 30 km, zoom 16, overview
+
+# We use --add-pois-to-areas so most of the polygons are processed in points.
+
+# Obecná budova
+building != no [0x13 level 1]
+
+# Transportation
+aeroway=aerodrome  [0x07 level 3]
+
+# Landuse
+landuse=vineyard [0x10f00 level 2]
+landuse=allotments [0x4e level 2]
+landuse=farm [0x4e level 2]
+landuse=farmyard [0x4e level 2]
+leisure=orchard [0x17 level 2]
+
+landuse=basin [0x3c level 2]
+landuse=reservoir [0x3f level 2]
+
+landuse=cemetary | landuse=cemetery [0x1a level 2]
+landuse=recreation_ground [0x19 level 2]
+landuse=village_green [0x17 level 2]
+
+landuse=residential [0x21 level 2]
+landuse=commercial [0x0c level 2]
+landuse=greenfield [0x17 level 2]
+landuse=industrial [0x0c level 2]
+landuse=military [0x04 level 2]
+landuse=quarry [0x0c level 2]
+landuse=retail [0x08 level 2]
+
+landuse=forest [0x50 level 4]
+
+# Leisure
+leisure=garden [0x17 level 0]
+leisure=golf_course [0x18 level 2]
+leisure=marina [0x09 level 1]
+leisure=park [0x17 level 1]
+leisure=pitch [0x19 level 0]
+leisure=playground [0x17 level 0]
+leisure=stadium [0x19 level 0]
+leisure=track [0x19 level 0]
+leisure=water_park [0x09 level 0]
+
+# Military
+military=airfield [0x04 level 2]
+military=barracks [0x04 level 0]
+military=danger_area [0x04 level 1]
+military=range [0x04 level 1]
+
+# Natural
+natural=glacier [0x4d level 4]
+natural=scrub [0x4f level 2]
+natural=wood [0x50 level 2]
+natural=water & area_size() > 25000000 [0x3c level 4]
+natural=water [0x3c level 2]
+waterway=riverbank [0x46 level 1]
+natural=wetland | natural=marsh | natural=mud [0x51 level 2]
+natural=scree [0x10f01 level 2]
+natural=sea [0x32 level 4]
+
+# add the following lines to your lines file
+ <finalize>
+ include './inc/compat_polygons';
