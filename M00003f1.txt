@@ -1125,22 +1125,7 @@ Xpm="32 5 2  1"
 "   !       !       !       !    "
 "   !       !       !       !    "
 ;12345678901234567890123456789012
-ExtendedLabels=N
-[end]
-
-
-[_line]
-Type=0x10000
-;GRMN_TYPE: //
-UseOrientation=Y
-Xpm="32 2 2  1"
-"! c #000000"
-"# c #FFFFFF"
-"!!!!####!!!!!!!!!!!!####!!!!!!!!"
-"!!!!!!!!!!!!####!!!!!!!!!!!!####"
-;12345678901234567890123456789012
-String1=0x12,Tramvajové koleje
-String2=0x04,Tram rails
+String1=0x12,Vlek
 ExtendedLabels=N
 [end]
 
@@ -1295,6 +1280,90 @@ Xpm="32 5 2  1"
 ;12345678901234567890123456789012
 String1=0x04,Not designated for foot
 String2=0x12,Neurceno pro pesi
+ExtendedLabels=N
+[end]
+
+
+[_line]
+Type=0x10111
+;GRMN_TYPE: //
+UseOrientation=Y
+LineWidth=3
+BorderWidth=1
+Xpm="0 0 2 0"
+"1 c #FFFFFF"
+"2 c #000000"
+String1=0x12,Most cesty sirky 1 px
+ExtendedLabels=N
+[end]
+
+
+[_line]
+Type=0x10112
+;GRMN_TYPE: //
+UseOrientation=Y
+LineWidth=4
+BorderWidth=1
+Xpm="0 0 2 0"
+"1 c #FFFFFF"
+"2 c #101010"
+String1=0x12,Most cesty sirky 2 px
+ExtendedLabels=N
+[end]
+
+
+[_line]
+Type=0x10113
+;GRMN_TYPE: //
+UseOrientation=Y
+LineWidth=5
+BorderWidth=1
+Xpm="0 0 2 0"
+"1 c #FFFFFF"
+"2 c #101010"
+String1=0x12,Most cesty sirky 3 px
+ExtendedLabels=N
+[end]
+
+
+[_line]
+Type=0x10114
+;GRMN_TYPE: //
+UseOrientation=Y
+LineWidth=6
+BorderWidth=1
+Xpm="0 0 2 0"
+"1 c #FFFFFF"
+"2 c #101010"
+String1=0x12,Most cesty sirky 4 px
+ExtendedLabels=N
+[end]
+
+
+[_line]
+Type=0x10115
+;GRMN_TYPE: //
+UseOrientation=Y
+LineWidth=7
+BorderWidth=1
+Xpm="0 0 2 0"
+"1 c #FFFFFF"
+"2 c #101010"
+String1=0x12,Most cesty sirky 5 px
+ExtendedLabels=N
+[end]
+
+
+[_line]
+Type=0x10116
+;GRMN_TYPE: //
+UseOrientation=Y
+LineWidth=8
+BorderWidth=1
+Xpm="0 0 2 0"
+"1 c #FFFFFF"
+"2 c #101010"
+String1=0x12,Most cesty sirky 6 px
 ExtendedLabels=N
 [end]
 

@@ -5,6 +5,21 @@
 # 3: <= 8 km, zoom 18, car
 # 4: <= 30 km, zoom 16, overview
 
+# Bridges before hiking trails to see the latter.
+highway=motorway & bridge=* [0x10116 level 4 continue]
+highway=trunk & bridge=* [0x10115 level 4 continue]
+(highway=primary | highway=primary_link) & bridge=* [0x10114 level 4 continue]
+(highway=secondary | highway=secondary_link | highway=tertiary | highway=tertiary_link) & bridge=* [0x10114 level 3 continue]
+(highway=residential | highway=living_street | (highway=pedestrian & area!=yes) | highway=trunk_link | highway=motorway_link) & bridge=* [0x10114 level 2 continue]
+(railway=rail | railway=narrow_gauge) & usage=main & bridge=* [0x10113 level 4 continue]
+(railway=rail | railway=narrow_gauge) & usage=branch & bridge=* [0x10113 level 3 continue]
+(railway=rail | railway=narrow_gauge) & bridge=* [0x10113 level 2 continue]
+(railway=rail | railway=light_rail) & bridge=* [0x10112 level 2 continue]
+(highway=track | railway=tram | railway=light_rail) & bridge=* [0x10112 level 2 continue]
+highway=steps & bridge=* [0x10112 level 1 continue]
+highway=cycleway & bridge=* [0x10111 level 2 continue]
+(highway=footway | highway=path) & bridge=* [0x10111 level 1 continue]
+
 # Hiking trails with "continue" to draw the tracks too
 mkgmap:red=yes | osmc:symbol ~ 'red.*' [0x10100 level 2 continue]
 mkgmap:blue=yes | osmc:symbol ~ 'blue.*' [0x10101 level 2 continue]
@@ -17,11 +32,10 @@ boundary=administrative & admin_level=2 [0x1e level 4]
 boundary=national_park | boundary=protected_area [0x1c level 3]
 
 # Railway, we need to continue with tram.
-railway=light_rail [0x14 level 4]
-railway=rail & usage=main [0x14 level 4]
-railway=rail & usage=branch [0x14 level 3]
-railway=rail [0x14 level 2]
-railway=tram [0x10e00 level 2 continue]
+(railway=rail | railway=narrow_gauge) & usage=main [0x14 level 4]
+(railway=rail | railway=narrow_gauge) & usage=branch [0x14 level 3]
+railway=rail | railway=narrow_gauge [0x14 level 2]
+railway=tram | railway=light_rail [0x10e00 level 2 continue]
 
 # Routable roads first
 # Used roads: 0x01 - 0x06, 0x08 - 0x13
