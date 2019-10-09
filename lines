@@ -29,6 +29,9 @@ mkgmap:green=yes | osmc:symbol ~ 'green.*' [0x10102 level 2 continue]
 mkgmap:yellow=yes | osmc:symbol ~ 'yellow.*' [0x10103 level 2 continue]
 mkgmap:black=yes | osmc:symbol ~ 'red.*' [0x10104 level 2 continue]
 
+# Tunnel simplification
+tunnel=* & tunnel!=no {mkgmap:tunnel 'yes'}
+
 # Borders
 boundary=administrative & admin_level=2 [0x1e level 4]
 boundary=national_park | boundary=protected_area [0x1c level 3]
@@ -41,17 +44,28 @@ railway=tram | railway=light_rail [0x10e00 level 2 continue]
 
 # Routable roads first
 # Used roads: 0x01 - 0x06, 0x08 - 0x13
+highway=motorway & mkgmap:tunnel=* [0x16 road_class 4 road_speed 7 level 4]
 highway=motorway [0x01 road_class 4 road_speed 7 level 4]
+highway=trunk & mkgmap:tunnel=* [0x16 road_class 4 road_speed 6 level 4]
 highway=trunk [0x02 road_class 4 road_speed 6 level 4]
+(highway=primary | highway=primary_link) & mkgmap:tunnel=* [0x16 road_class 3 road_speed 5 level 4]
 highway=primary | highway=primary_link [0x03 road_class 3 road_speed 5 level 4]
+(highway=secondary | highway=secondary_link) & mkgmap:tunnel=* [0x16 road_class 2 road_speed 4 level 3]
 highway=secondary | highway=secondary_link [0x04 road_class 2 road_speed 4 level 3]
+(highway=tertiary | highway=tertiary_link) & mkgmap:tunnel=* [0x16 road_class 1 road_speed 3 level 3]
 highway=tertiary | highway=tertiary_link [0x05 road_class 1 road_speed 3 level 3]
+(highway=residential | highway=living_street) & mkgmap:tunnel=* [0x16 road_class 0 road_speed 2 level 2]
 highway=residential | highway=living_street [0x06 road_class 0 road_speed 2 level 2]
+(highway=pedestrian & area!=yes) & mkgmap:tunnel=* [0x16 road_class 0 level 2]
 highway=pedestrian & area!=yes [0x06 road_class 0 level 2]
+highway=unclassified & mkgmap:tunnel=* [0x16 road_class 0 level 2]
 highway=unclassified [0x07 road_class 0 level 2]
+highway=trunk_link & mkgmap:tunnel=* [0x16 road_class 1 road_speed 5 level 2]
 highway=trunk_link [0x08 road_class 1 road_speed 5 level 2]
+highway=motorway_link & mkgmap:tunnel=* [0x16 road_class 1 road_speed 6 level 2]
 highway=motorway_link [0x09 road_class 1 road_speed 6 level 2]
 # Tracks
+(highway=service | highway=track) & mkgmap:tunnel=* [0x16 road_class 0 level 2]
 highway=service | (highway=track & tracktype=grade1) [0x0a road_class 0 level 2]
 highway=track & tracktype=grade2 [0x0b road_class 0 level 2]
 highway=track & tracktype=grade3 [0x0c road_class 0 level 2]
@@ -59,13 +73,16 @@ highway=track & tracktype=grade4 [0x0d road_class 0 level 2]
 highway=track & tracktype=grade5 [0x0e road_class 0 level 2]
 highway=track | highway=byway | highway=minor [0x0f road_class 0 level 2]
 # No cars
+highway=cycleway & mkgmap:tunnel=* [0x16 road_class 0 level 2]
 highway=cycleway & foot=no [0x30 road_class 0 level 2]
 highway=cycleway [0x11 road_class 0 level 2]
+(highway=footway | highway=path | highway=bridleway | highway=steps) & mkgmap:tunnel=* [0x16 road_class 0 level 1]
 highway=footway [0x10 road_class 0 level 1]
 highway=path | highway=bridleway [0x12 road_class 0 level 1]
 highway=steps [0x13 road_class 0 level 1]
 
 # Mop up any unrecognised highway types
+(highway=* & highway!=abandoned & highway!=disused & area!=yes) & mkgmap:tunnel=* [0x16 road_class 0 level 1]
 highway=* & highway!=abandoned & highway!=disused & area!=yes [0x07 road_class 0 level 1]
 
 # Lifts of different kinds

@@ -957,6 +957,24 @@ ExtendedLabels=N
 
 
 [_line]
+Type=0x16
+;GRMN_TYPE: Roads/TRAIL/Walkway or trail/Non NT, NT
+UseOrientation=Y
+Xpm="32 4 2  1"
+"! c #C5C5C5"
+"  c none"
+"!!!!!!  !!!!!!  !!!!!!  !!!!!!  "
+"                                "
+"                                "
+"!!!!!!  !!!!!!  !!!!!!  !!!!!!  "
+;12345678901234567890123456789012
+String1=0x12,Tunel
+String2=0x04,Tunnel
+ExtendedLabels=N
+[end]
+
+
+[_line]
 Type=0x18
 ;GRMN_TYPE: Water Features/STREAM/Small stream or creek/Non NT
 UseOrientation=N
@@ -1379,26 +1397,6 @@ Xpm="0 0 2 0"
 "1 c #FFFFFF"
 "2 c #101010"
 String1=0x12,Most cesty sirky 6 px
-ExtendedLabels=N
-[end]
-
-
-[_line]
-Type=0x1011f
-;GRMN_TYPE: //
-UseOrientation=Y
-Xpm="32 6 2  1"
-"! c #000000"
-"  c none"
-"! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! "
-" ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! !"
-"! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! "
-" ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! !"
-"! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! "
-" ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! !"
-;12345678901234567890123456789012
-String1=0x12,Tunel
-String2=0x04,Tunnel
 ExtendedLabels=N
 [end]
 
