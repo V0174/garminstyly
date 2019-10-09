@@ -746,6 +746,21 @@ ExtendedLabels=N
 
 
 [_line]
+Type=0x07
+;GRMN_TYPE: Roads/ALLEY, DRIVEWAY/Alleyway, private driveway to residence/Non NT, NT
+UseOrientation=Y
+LineWidth=1
+BorderWidth=1
+Xpm="0 0 2 0"
+"1 c #FFFFFF"
+"2 c #000000"
+String1=0x12,Príjezdová, nebo neklasifikovaná cesta
+String2=0x04,Service or unclassified road
+ExtendedLabels=N
+[end]
+
+
+[_line]
 Type=0x08
 ;GRMN_TYPE: Roads/LOW_SPEED_RAMP/Highway ramp which is to be driven at low speeds/Non NT, NT
 UseOrientation=Y
