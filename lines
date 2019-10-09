@@ -14,7 +14,7 @@ if (bridge=* & bridge!=no) then
 	(highway=residential | highway=living_street | (highway=pedestrian & area!=yes) | highway=trunk_link | highway=motorway_link) [0x10114 level 2 continue]
 	(railway=rail | railway=narrow_gauge) & usage=main [0x10113 level 4 continue]
 	(railway=rail | railway=narrow_gauge) & usage=branch [0x10113 level 3 continue]
-	(railway=rail | railway=narrow_gauge) [0x10113 level 2 continue]
+	railway=rail | railway=narrow_gauge | highway=unclassified [0x10113 level 2 continue]
 	(railway=rail | railway=light_rail) [0x10112 level 2 continue]
 	(highway=track | railway=tram | railway=light_rail) [0x10112 level 2 continue]
 	highway=steps [0x10112 level 1 continue]

@@ -1384,6 +1384,26 @@ ExtendedLabels=N
 
 
 [_line]
+Type=0x1011f
+;GRMN_TYPE: //
+UseOrientation=Y
+Xpm="32 6 2  1"
+"! c #000000"
+"  c none"
+"! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! "
+" ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! !"
+"! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! "
+" ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! !"
+"! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! "
+" ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! !"
+;12345678901234567890123456789012
+String1=0x12,Tunel
+String2=0x04,Tunnel
+ExtendedLabels=N
+[end]
+
+
+[_line]
 Type=0x10e00
 ;GRMN_TYPE: Customizable Line Types/CUSTOMIZABLE_LINE_1/Non-routable customizable line/Non NT, NT
 UseOrientation=N
