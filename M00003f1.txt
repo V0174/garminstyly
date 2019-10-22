@@ -1321,11 +1321,13 @@ ExtendedLabels=N
 Type=0x10111
 ;GRMN_TYPE: //
 UseOrientation=Y
-LineWidth=3
-BorderWidth=1
-Xpm="0 0 2 0"
-"1 c #FFFFFF"
-"2 c #000000"
+Xpm="32 3 2  1"
+"! c #000000"
+"  c none"
+"!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!"
+"                                "
+"!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!"
+;12345678901234567890123456789012
 String1=0x12,Most cesty sirky 1 px
 ExtendedLabels=N
 [end]
@@ -1335,11 +1337,14 @@ ExtendedLabels=N
 Type=0x10112
 ;GRMN_TYPE: //
 UseOrientation=Y
-LineWidth=4
-BorderWidth=1
-Xpm="0 0 2 0"
-"1 c #FFFFFF"
-"2 c #101010"
+Xpm="32 4 2  1"
+"! c #000000"
+"  c none"
+"!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!"
+"                                "
+"                                "
+"!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!"
+;12345678901234567890123456789012
 String1=0x12,Most cesty sirky 2 px
 ExtendedLabels=N
 [end]
@@ -1349,11 +1354,15 @@ ExtendedLabels=N
 Type=0x10113
 ;GRMN_TYPE: //
 UseOrientation=Y
-LineWidth=5
-BorderWidth=1
-Xpm="0 0 2 0"
-"1 c #FFFFFF"
-"2 c #101010"
+Xpm="32 5 2  1"
+"! c #000000"
+"  c none"
+"!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!"
+"                                "
+"                                "
+"                                "
+"!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!"
+;12345678901234567890123456789012
 String1=0x12,Most cesty sirky 3 px
 ExtendedLabels=N
 [end]
@@ -1363,11 +1372,16 @@ ExtendedLabels=N
 Type=0x10114
 ;GRMN_TYPE: //
 UseOrientation=Y
-LineWidth=6
-BorderWidth=1
-Xpm="0 0 2 0"
-"1 c #FFFFFF"
-"2 c #101010"
+Xpm="32 6 2  1"
+"! c #000000"
+"  c none"
+"!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!"
+"                                "
+"                                "
+"                                "
+"                                "
+"!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!"
+;12345678901234567890123456789012
 String1=0x12,Most cesty sirky 4 px
 ExtendedLabels=N
 [end]
@@ -1377,11 +1391,17 @@ ExtendedLabels=N
 Type=0x10115
 ;GRMN_TYPE: //
 UseOrientation=Y
-LineWidth=7
-BorderWidth=1
-Xpm="0 0 2 0"
-"1 c #FFFFFF"
-"2 c #101010"
+Xpm="32 7 2  1"
+"! c #000000"
+"  c none"
+"!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!"
+"                                "
+"                                "
+"                                "
+"                                "
+"                                "
+"!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!"
+;12345678901234567890123456789012
 String1=0x12,Most cesty sirky 5 px
 ExtendedLabels=N
 [end]
@@ -1391,11 +1411,18 @@ ExtendedLabels=N
 Type=0x10116
 ;GRMN_TYPE: //
 UseOrientation=Y
-LineWidth=8
-BorderWidth=1
-Xpm="0 0 2 0"
-"1 c #FFFFFF"
-"2 c #101010"
+Xpm="32 8 2  1"
+"! c #000000"
+"  c none"
+"!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!"
+"                                "
+"                                "
+"                                "
+"                                "
+"                                "
+"                                "
+"!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!"
+;12345678901234567890123456789012
 String1=0x12,Most cesty sirky 6 px
 ExtendedLabels=N
 [end]
