@@ -58,7 +58,6 @@ amenity=emergency_phone [0x5100 level 2]
 amenity=fire_station [0x3008 level 1]
 amenity=pharmacy [0x2e05 level 1]
 amenity=police [0x3001 level 1]
-amenity=telephone [0x5100 level 0]
 
 # Other important hiking amenities
 amenity=drinking_water | amenity=water_point [0x5000 level 2]
