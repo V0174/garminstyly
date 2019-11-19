@@ -10,8 +10,8 @@ place=city | population >= 300000 [0x0100 level 4]
 place=town | population >= 3000 [0x0600 level 3]
 place=suburb [0x0c00 level 2]
 place=village | population >= 200 [0x0b00 level 2]
-place=hamlet | (population < 200 & population >= 100) [0x0b02 level 2]
-place=isolated_dwelling | population < 100 [0x0b03 level 1]
+place=hamlet | (population < 200 & population >= 100) [0x0d00 level 2]
+place=isolated_dwelling | population < 100 [0x0d00 level 1]
 
 # Accomodation (with service)
 tourism=hotel [0x2b01 level 2]
