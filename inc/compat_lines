@@ -1,4 +1,4 @@
-include 'inc/roadspeed';
+include '../inc/roadspeed';
 
 name=* { name '${name}' }
 mkgmap:default_name=* { name '${mkgmap:default_name}' }

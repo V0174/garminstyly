@@ -20,13 +20,6 @@ mkgmap:bridge=* & highway=steps [0x10112 level 1 continue]
 mkgmap:bridge=* & highway=cycleway [0x10111 level 2 continue]
 mkgmap:bridge=* & (highway=footway | highway=path) [0x10111 level 1 continue]
 
-# Hiking trails with "continue" to draw the tracks too
-mkgmap:red=yes | osmc:symbol ~ 'red.*' [0x10100 level 2 continue]
-mkgmap:blue=yes | osmc:symbol ~ 'blue.*' [0x10101 level 2 continue]
-mkgmap:green=yes | osmc:symbol ~ 'green.*' [0x10102 level 2 continue]
-mkgmap:yellow=yes | osmc:symbol ~ 'yellow.*' [0x10103 level 2 continue]
-mkgmap:black=yes | osmc:symbol ~ 'red.*' [0x10104 level 2 continue]
-
 # Tunnel simplification
 tunnel=* & tunnel!=no {add mkgmap:tunnel='yes'}
 
@@ -114,5 +107,5 @@ contour=elevation & contour_ext=elevation_minor
 
 # Final - for compatibility with previous mkgmap.
 <finalize>
- include './inc/compat_lines';
- include './inc/access';
+ include '../inc/compat_lines';
+ include '../inc/access';

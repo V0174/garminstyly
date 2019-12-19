@@ -164,4 +164,4 @@ shop=car_repair [0x2f03 level 0]
 
 # Final - for compatibility with previous mkgmap. To be changed later.
 <finalize>
- include './inc/compat_points';
+ include '../inc/compat_points';

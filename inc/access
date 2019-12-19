@@ -30,7 +30,7 @@ psv=*                { add taxi='${psv}'; add bus='${psv}'; }
 
 
 # Include country specific access rules that are derived from the highway type
-include 'inc/access_country';
+include '../inc/access_country';
 
 # Add common access rules that are derived from the highway type
 highway=steps                              { add foot=yes; add access=no }

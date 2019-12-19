@@ -1,0 +1,9 @@
+﻿# Levels:
+# 0: under 120 m, zoom 24, city
+# 1: under 300 m, zoom 23, hiking
+# 2: under 2 km, zoom 20, cycling
+# 3: under 8 km, zoom 18, car
+# 4: under 30 km, zoom 16, overview
+
+include '../common/polygons';
+

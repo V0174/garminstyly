@@ -1,0 +1,7 @@
+
+type=route & route=ferry {
+	apply {
+		set route=ferry;
+		add name='${name}';
+	}
+}

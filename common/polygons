@@ -67,4 +67,4 @@ natural=sea [0x32 level 4]
 
 # add the following lines to your lines file
  <finalize>
- include './inc/compat_polygons';
+ include '../inc/compat_polygons';
