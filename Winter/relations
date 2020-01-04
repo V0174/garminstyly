@@ -1,0 +1,40 @@
+# Not possible to add osmc:symbol directly because of overlapping.
+
+if (type=route & (route=piste | route=ski)) then
+	() {
+		apply {
+			add piste:type='${piste:type}'
+			add piste:difficulty='{piste:difficulty}'
+			set name='${piste:name}'
+			add name='${name}'
+			add name='${ref}'
+		}
+	}
+	piste:type=downhill {
+		apply {
+			add mkgmap:downhill=yes
+			add mkgmap:downhill:difficulty='{piste:difficulty}'
+		}
+	}
+	piste:type=nordic {
+		apply {
+			add mkgmap:nordic=yes
+			add mkgmap:nordic:difficulty='{piste:difficulty}'
+		}
+	}
+	piste:type=skitour {
+		apply {
+			add mkgmap:skitour=yes
+			add mkgmap:skitour:difficulty='{piste:difficulty}'
+		}
+	}
+	piste:type=snowpark {
+		apply {
+			add mkgmap:snowpark=yes
+			add mkgmap:snowpark:difficulty='{piste:difficulty}'
+		}
+	}
+end
+
+include '../common/relations';
+

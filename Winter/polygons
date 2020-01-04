@@ -1,0 +1,23 @@
+﻿# Levels:
+# 0: under 120 m, zoom 24, city
+# 1: under 300 m, zoom 23, hiking
+# 2: under 2 km, zoom 20, cycling
+# 3: under 8 km, zoom 18, car
+# 4: under 30 km, zoom 16, overview
+
+if (piste:type=downhill) then
+	piste:difficulty=novice [0x22 level 2]
+	piste:difficulty=easy [0x23 level 2]
+	piste:difficulty=intermediate [0x24 level 2]
+	piste:difficulty=advanced [0x25 level 2]
+	piste:difficulty=extreme [0x26 level 2]
+	piste:difficulty=freeride [0x27 level 2]
+end
+
+piste:type=snow_park [0x28 level 2]
+piste:type=playground [0x11000 level 2]
+piste:type=skitour [0x27 level 2]
+piste:type=ice_skate [0x29 level 2]
+
+include '../common/polygons';
+

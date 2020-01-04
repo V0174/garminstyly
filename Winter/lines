@@ -1,0 +1,21 @@
+# Levels:
+# 0: <= 120 m, zoom 24, city
+# 1: <= 300 m, zoom 23, hiking
+# 2: <= 1.2 km, zoom 20, cycling
+# 3: <= 8 km, zoom 18, car
+# 4: <= 30 km, zoom 16, overview
+
+#
+if (piste:type=downhill | mkgmap:downhill=yes) then
+	piste:difficulty=novice | mkgmap:downhill:difficulty=novice [0x10100 level 2 continue]
+	piste:difficulty=easy | mkgmap:downhill:difficulty=easy [0x10101 level 2 continue]
+	piste:difficulty=intermediate | mkgmap:downhill:difficulty=intermediate [0x10102 level 2 continue]
+	piste:difficulty=advanced | mkgmap:downhill:difficulty=advanced [0x10103 level 2 continue]
+	piste:difficulty=extreme | mkgmap:downhill:difficulty=extreme [0x10104 level 2 continue]
+	piste:difficulty=freeride | mkgmap:downhill:difficulty=freeride [0x10105 level 2 continue]
+end
+
+piste:type=skitour [0x10106 level 2 continue]
+piste:type=nordic [0x10e10 level 2 continue]
+
+include '../common/lines';
