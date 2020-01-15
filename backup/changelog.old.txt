@@ -1,0 +1,178 @@
+ Verze 0.35 - 4. 4. 2019
+
+    Nové include soubory z mkgmap
+    Opravena chyba renderování building
+
+Verze 0.34 - 2. 6. 2018
+
+    Konec podpory českých kct_* tagů, všechny by měly mít osmc:symbol.
+    Konec renderování pastvin a zatravněné plochy.
+    Změna odstínu žluté a zelené značky pro lepší viditelnost.
+    Renderovány útesy
+    Renderovány osamocené skály a kameny
+    Změněny barvy cest, vrstevnic a některých dalších liniových prvků
+    Změněna barva budov
+    Oprava renderování vinohradu uvnitř zahrady / farmy
+    Změna renderingu zahrad, parků
+    Rendering sadů
+    Změna renderingu přírodních rezervací
+
+Verze 0.33 - 27. 3. 2018
+
+    Oprava renderingu černé značky (např. Rakousko)
+
+Verze 0.32 - 28. 6. 2017
+
+    Drobná změna sémantického významu hranic ;)
+    Zmenšení šířky lanovek
+    Změna barev lesních, polních a pěších cest
+    Změna renderingu pěších cest
+    Změna barvy vrstevnic
+
+Verze 0.31 - 16. 5. 2017
+
+    Opětovná změna barvy moře
+    Změna barvy jezer (to všechno aby se nepletly s ledovci)
+    Ledovce se renderují při menším přiblížení
+
+Verze 0.30 - 14. 5. 2017
+
+    Změna barvy moře (ano, i takové věci umíme)
+    Výraznější rendering hranic
+
+Verze 0.29 - 13. 5. 2017
+
+    Přístřešky se renderují při menším příblížení
+    Renderování moře
+    Update mkgmap na verzi r3909.
+    Update splitteru na verzi r583.
+
+Verze 0.28 - 12. 3. 2017
+
+    Změna renderingu highway=unclassified (nyní se renderuje stejně jako highway=service)
+
+Verze 0.27 - 25. 9. 2016
+
+    Kempy se renderují při menším přiblížení.
+    Přidána podpora amenity=water_point.
+    Opět změna renderování vrstevnic, pořád to nebylo ono.
+    Pořešeny vrstevnice v nejvyšších partiích Tater.
+
+Verze 0.26 - 2. 7. 2016
+
+    Hlavní vrstevnice se renderují o něco tenčí čarou.
+
+Verze 0.25 - 25. 5. 2016
+
+    Změna renderování vrstevnic - barvy, přiblížení.
+    Mírná změna úrovně renderování silnic.
+    Malý posun ve vrstvách, aby se toho ve 2km nerenderovalo tolik.
+    Changelog byl přesunut na web.
+    Update mkgmap na verzi r3676.
+    A v neposlední řadě - začínám pravidelně renderovat i Slovensko.
+
+Verze 0.24 - 2. 4. 2016
+
+    Změna renderingu lanovek a vleků
+
+Verze 0.23 - 15. 3. 2016
+
+    Přidáno renderování lanovek a vleků
+
+Verze 0.22 - 31. 12. 2015
+
+    Opět pokus o zlepšení renderování železnic.
+    Renderování tramvajových tratí.
+    Mírné změny renderování různých landuse
+    Změna renderování vrstevnic
+    Přidáno renderování suťových polí
+
+Verze 0.21 - 4. 12. 2015
+
+    Opět oprava renderování souřadnic
+
+Verze 0.20 - 20. 10. 2015
+
+    Vrstevnice se renderují později pro lepší přehlednost při malém přiblížení.
+
+Verze 0.19 - 20. 9. 2015
+
+    Vrstevnice se od jisté doby vůbec nerenderovaly, snad opraveno. Vrstevnice znovu staženy, tentokrát zkonvertovány vlastními silami.
+    Změna zoomu renderování železnice (pořád mi to na GPS zlobí)
+    Mkgmap aktualizováno na verzi 3643
+
+Verze 0.18 - 25. 8. 2014
+
+    Vrstevnice ještě jednou opraveny, pořád jsou špatně.
+    Změna zoomu renderování vrstevnic
+
+Verze 0.17 - 18. 8. 2014
+
+    Vrstevnice se renderují špatně, vrácen předchozí způsob.
+
+Verze 0.16 - 19. 4. 2014
+
+    Změna renderování železnice na užší bitmapu.
+
+Verze 0.15 - 6. 4. 2014
+
+    Kompletní změna renderování zoomů pro zjednodušení a snad zrychlení renderingu.
+    Změny v renderování, např. lepší rendering turistických tras a letišť.
+
+Verze 0.14 - 30. 3. 2014
+
+    Vyčištěny styly pro polygony, většina z odstraněných byla redundantní.
+    Přidáno renderování více historických objektů.
+    Úprava renderingu pitné vody.
+    Stažena nová Verze mkgmap r3138.
+
+Verze 0.13 - 25. 1. 2014
+
+    nebudou se renderovat nefunkční cesty (disused, abandoned). Dělá to problémy s Hitlerovou dálnicí.
+
+Verze 0.12 - 18. 1. 2014
+
+    Silnice se renderují od nižšího přiblížení.
+    Letiště se naopak renderují až od vyššího přiblížení s chabým pokusem o renderování významnějších letišť dříve.
+
+﻿
+Verze 0.11 - 9. 1. 2014
+
+    Rendering přesunut na Raspberry Pi, těšte se na pravidelné aktualizace!
+    Použita poslední verze mkgmap r2946, bylo a bude nutné trochu předělat styly, bylo zrušeno mnoho implicitních nastavení a zpřísněna kontrola.
+    Přidán rendering čísel domů.
+    Zjednodušení cest pro menší soubor a rychlejší rendering.
+    Přidáno mnoho dalších podružných nastavení a kontrol.
+
+Verze 0.10 - 29. 9. 2013
+
+    Routování by mělo být mnohem použitelnější - pro pěší a kola.
+    Opraveno několik chyb v renderování
+    Přidána černá turistická značka (pro hranice s Polskem). Renderuje se šedě.
+    Mírně zjednodušeny styly
+    Zapnuto renderování podrobnějších vrstevnic
+
+Verze 0.09 - 8. 9. 2013
+
+    Změněno renderování hromadné dopravy
+    Zapnuta možnost routování v mapách
+
+Verze 0.08 - 30. 8. 2013
+
+    Opětovná změna renderování highway=track, předchozí nevypadalo na GPS dobře.
+
+Verze 0.07
+
+    Zobrazování studen s pumpou
+    Pokusná změna renderování highway=track
+
+Verze 0.06 - 15. 6. 2013
+
+    Úprava renderování highway=track
+
+Verze 0.05 - 18. 5. 2013
+
+    Úprava renderování track grade 1 a 2
+    Zrušení renderování metra, renderovat se budou jen vchody.
+    Výraznější renderování přístřešků a ubytování.
+    Začal jsem psát changelog
