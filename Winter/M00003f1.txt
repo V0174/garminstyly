@@ -794,14 +794,16 @@ ExtendedLabels=N
 Type=0x1c
 ;GRMN_TYPE: Political Borders/MJR_PLTCL_BDRY/Major political boundary (typically used for state, provincial borders)/Non NT
 UseOrientation=Y
-Xpm="32 2 2  1"
+Xpm="32 3 2  1"
 "! c #00AA00"
 "  c none"
+"!!  !!!!!!!!!!  !!  !!!!!!!!!!  "
 "!!  !!!!!!!!!!  !!  !!!!!!!!!!  "
 "!!  !!!!!!!!!!  !!  !!!!!!!!!!  "
 ;12345678901234567890123456789012
 String1=0x04, National Park
 String2=0x0F, Nasjonalpark
+String3=0x12,Národní park
 ExtendedLabels=N
 [end]
 
@@ -810,13 +812,19 @@ ExtendedLabels=N
 Type=0x1e
 ;GRMN_TYPE: Political Borders/INTRN_PLTCL_BDRY/International boundary/Non NT
 UseOrientation=Y
-Xpm="32 3 2  1"
+Xpm="32 7 2  1"
 "! c #000000"
 "# c #FF00FF"
 "################################"
-"!!!!#!!#!!!!#!!#!!!!#!!#!!!!#!!#"
+"#!!######!!######!!######!!#####"
+"!##!####!##!####!##!####!##!####"
+"!##!####!##!####!##!####!##!####"
+"!##!####!##!####!##!####!##!####"
+"!##!####!##!####!##!####!##!####"
 "################################"
 ;12345678901234567890123456789012
+String1=0x04,Country border
+String2=0x12,Hranice státu
 ExtendedLabels=N
 [end]
 
