@@ -743,23 +743,6 @@ ExtendedLabels=N
 
 
 [_line]
-Type=0x14
-;GRMN_TYPE: Misc. Line Types/RAILROAD/Railroad/Non NT
-UseOrientation=Y
-Xpm="32 3 2  1"
-"! c #000000"
-"# c #FFFFFF"
-"!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!"
-"!!!!!!!!########!!!!!!!!#######!"
-"!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!"
-;12345678901234567890123456789012
-String1=0x12,Železnice
-String2=0x04,Railway
-ExtendedLabels=N
-[end]
-
-
-[_line]
 Type=0x16
 ;GRMN_TYPE: Roads/TRAIL/Walkway or trail/Non NT, NT
 UseOrientation=Y
@@ -1210,6 +1193,23 @@ Xpm="32 8 2  1"
 "!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!"
 ;12345678901234567890123456789012
 String1=0x12,Most cesty sirky 6 px
+ExtendedLabels=N
+[end]
+
+
+[_line]
+Type=0x10d00
+;GRMN_TYPE: //
+UseOrientation=Y
+Xpm="32 3 2  1"
+"! c #000000"
+"# c #FFFFFF"
+"!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!"
+"!!!!!!!!########!!!!!!!!#######!"
+"!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!"
+;12345678901234567890123456789012
+String1=0x12,Železnice
+String2=0x04,Railway
 ExtendedLabels=N
 [end]
 

@@ -28,9 +28,9 @@ boundary=administrative & admin_level=2 [0x1e level 4]
 boundary=national_park | boundary=protected_area [0x1c level 3]
 
 # Railway, we need to continue with tram as there might be a road too.
-(railway=rail | railway=narrow_gauge) & usage=main [0x14 level 4]
-(railway=rail | railway=narrow_gauge) & usage=branch [0x14 level 3]
-railway=rail | railway=narrow_gauge [0x14 level 2]
+(railway=rail | railway=narrow_gauge) & usage=main [0x10d00 level 4]
+(railway=rail | railway=narrow_gauge) & usage=branch [0x10d00 level 3]
+railway=rail | railway=narrow_gauge [0x10c00 level 2]
 railway=tram | railway=light_rail [0x10e00 level 2 continue]
 
 # Routable roads first
