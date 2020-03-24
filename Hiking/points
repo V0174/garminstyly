@@ -5,4 +5,7 @@
 # 3: under 8 km, zoom 18, car
 # 4: under 30 km, zoom 16, overview
 
+# Guideposts
+information=guidepost & (hiking=yes | foot=yes) [0x4c01 level 1]
+
 include '../common/points';

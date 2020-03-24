@@ -5,10 +5,13 @@
 # 3: under 8 km, zoom 18, car
 # 4: under 30 km, zoom 16, overview
 
+# Ski centers
 landuse=winter_sports [0x02d06 level 3]
 piste:type=ice_skate [0x02d08 level 2]
-
 amenity=ski_school [0x02c05 level 1]
 rental=ski | amenity=ski_rental [0x11715 level 1]
+
+# Guideposts
+information=guidepost & (ski=yes | ski:nordic=yes | ski:alpine=yes | ski:telemark=yes | ice_skates=yes | snowmobile=yes) [0x4c01 level 1]
 
 include '../common/points';

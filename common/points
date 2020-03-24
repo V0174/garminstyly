@@ -47,8 +47,6 @@ amenity=place_of_worship [0x2c0b level 0]
 man_made=tower & (tower:type=observation | tourism=viewpoint) [0x6701 level 2]
 
 # Hiking info
-information=guidepost & (bicycle=yes | ski=yes) [0x4c01 level 2]
-information=guidepost [0x4c01 level 1]
 tourism=information [0x4c00 level 0]
 
 # Emergency
