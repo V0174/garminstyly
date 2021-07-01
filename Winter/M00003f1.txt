@@ -1039,9 +1039,18 @@ ExtendedLabels=N
 Type=0x10106
 ;GRMN_TYPE: Marine Lines/OVERHEAD_CABLE/Overhead cable/Non NT, NT
 UseOrientation=Y
-LineWidth=4
-Xpm="0 0 1 0"
-"1 c #FFFF00"
+Xpm="32 8 2  1"
+"! c #FFCA00"
+"  c none"
+"!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!"
+"!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!"
+"!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!"
+"                                "
+"                                "
+"                                "
+"                                "
+"                                "
+;12345678901234567890123456789012
 String1=0x04,Skitour route
 String2=0x12,Skialpinistická trasa
 ExtendedLabels=N
@@ -1233,14 +1242,12 @@ ExtendedLabels=N
 Type=0x10e10
 ;GRMN_TYPE: Customizable Line Types/CUSTOMIZABLE_LINE_17/Non-routable customizable line/Non NT, NT
 UseOrientation=Y
-Xpm="32 10 2  1"
-"! c #BD00B4"
+Xpm="32 8 2  1"
+"! c #7B00D5"
 "  c none"
 "!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!"
 "!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!"
 "!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!"
-"!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!"
-"                                "
 "                                "
 "                                "
 "                                "
