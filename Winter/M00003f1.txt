@@ -355,7 +355,7 @@ String1=0x12,Sut
 String2=0x04,Scree
 ExtendedLabels=N
 Xpm="32 32 2 1"
-"! c #390000"
+"! c #B4B4B4"
 "  c none"
 "          !!!      !!         !!"
 "          !!               !!!!!"
